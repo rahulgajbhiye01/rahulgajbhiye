@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Login from "@/components/pages/admin/login";
+import Login from "@/components/pages/admin/ui/login";
 
 export const metadata: Metadata = {
   title: "Login",
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default async function LoginPage() {
   return (
-    <div className="flex flex-col">
+    <div className="flex h-screen flex-col justify-center">
       <Login />
     </div>
   );

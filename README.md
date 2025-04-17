@@ -1,1 +1,4 @@
-## Checkout my portfolio website [rahulgajbhiye](https://rahulgajbhiye.com/)
+## 👆[Portfolio](https://rahulgajbhiye.com/)
+
+## Upcoming updates:-
+- Blog Section

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
-import BlogEditor from "@/components/pages/admin/blog";
-import { getBlog } from "@/lib/actions/blog";
+import BlogEditor from "@/components/pages/admin/ui/blog";
+import { getBlog } from "@/lib/server-actions/blog";
 
 interface Params {
   params: { blogId: string };

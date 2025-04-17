@@ -16,14 +16,14 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --background: 0 0% 93%; /* #EEEEEE */
+    --foreground: 216 18.1% 16.3%; /* #222831 */
+    --card: 218.6 12.5% 22%; /* #31363F */
+    --card-foreground: 0 0% 93%; /* #EEEEEE */
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 183.2 25.7% 57.3%; /* #76ABAE */
+    --primary-foreground: 218.6 12.5% 22%; /* #31363F */
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
@@ -44,25 +44,25 @@
   }
 
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
+    --background: 0 0% 93%; /* #EEEEEE */
+    --foreground: 216 18.1% 16.3%; /* #222831 */
+    --card: 218.6 12.5% 22%; /* #31363F */
+    --card-foreground: 0 0% 93%; /* #EEEEEE */
+    --popover: 218.6 12.5% 22%; /* #31363F */
+    --popover-foreground: 0 0% 93%; /* #EEEEEE */
+    --primary: 183.2 25.7% 57.3%; /* #76ABAE */
+    --primary-foreground: 190 25% 15%; /* #222831 */
+    --secondary: 218.6 12.5% 22%; /* #31363F */
+    --secondary-foreground: 0 0% 93%; /* #EEEEEE */
+    --muted: 218.6 12.5% 22%; /* #31363F */
+    --muted-foreground: 183.2 25.7% 57.3%; /* #76ABAE */
+    --accent: 183.2 25.7% 57.3%; /* #76ABAE */
+    --accent-foreground: 216 18.1% 16.3%; /* #222831 */
+    --destructive: 183.2 25.7% 57.3%; /* #76ABAE */
+    --destructive-foreground: 0 0% 93%; /* #EEEEEE */
+    --border: 218.6 12.5% 22%; /* #31363F */
+    --input: 218.6 12.5% 22%; /* #31363F */
+    --ring: 0 0% 93%; /* #EEEEEE */
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -70,30 +70,6 @@
     --chart-5: 340 75% 55%;
   }
 }
-
-.parallax-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("/background.png");
-  background-size: cover;
-  background-position: center;
-}
-
-.parallax-foreground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("/omen.jpg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-/* Loader CSS */
 
 .spinner {
   width: 32px;
@@ -131,7 +107,7 @@
 
 .mdxeditor-toolbar {
   overflow: auto;
-  @apply w-full overflow-auto;
+  position: fixed;
 }
 
 .mdxeditor-diff-source-wrapper {

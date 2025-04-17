@@ -1,45 +1,38 @@
-import Projects from "@/components/ui/custom/Projects";
-import Skills from "@/components/ui/custom/Skills";
-import Experience from "@/components/ui/custom/Experience";
-import { IProject, ISkill } from "@/constants/types";
-import Hero from "@/components/ui/custom/Hero";
-import HomeFooter from "@/components/layouts/HomeFooter";
+import Hero from "./ui/Hero";
 
-interface Props {
-  worksData: {
-    skillsData: ISkill[];
-    projectsData: IProject[];
-  };
-}
-
-const Home = ({ worksData }: Props) => {
-  const { skillsData, projectsData } = worksData;
+const Home = () => {
   return (
     <>
-      <Hero />
-
-      <section className="flex min-h-screen flex-col items-center pt-20 md:pt-36">
-        <div className="flex w-11/12 flex-col gap-16">
-          <div className="flex flex-col gap-4">
-            <span className="text-2xl">
-              A versatile technologist creating projects across multiple
-              platforms.
-            </span>
-            <Skills skillsData={skillsData} />
-          </div>
-
-          <div className="flex flex-col gap-4">
-            <span>List of all my projects.</span>
-            <Projects projectsData={projectsData} />
-          </div>
+      <section
+        id="container"
+        className="flex min-h-screen w-[1200px] justify-center"
+      >
+        <div className="z-10 flex flex-col items-center justify-center gap-8">
+          <Hero />
         </div>
       </section>
 
-      <section className="h-screen">
-        <Experience />
+      <section
+        id="projects"
+        className="flex min-h-screen flex-col items-center gap-12 pt-32"
+      >
+        <h1 className="text-7xl font-bold">Projects</h1>
+
+        <div className="flex flex-col gap-4">
+          {/* <Projects projectsData={projectsData} /> */}
+        </div>
       </section>
 
-      <HomeFooter />
+      <section
+        id="experience"
+        className="flex min-h-screen flex-col items-center gap-12 pt-32"
+      >
+        <h1 className="text-7xl font-bold">Experience</h1>
+
+        <div className="flex flex-col gap-4"></div>
+
+        <div className="flex flex-col gap-4"></div>
+      </section>
     </>
   );
 };

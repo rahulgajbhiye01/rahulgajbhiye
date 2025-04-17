@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
-import Loading from "@/components/ui/custom/Loading";
-import BlogReader from "@/components/ui/custom/BlogReader";
-import { getBlogs, getBlog } from "@/lib/actions/blog";
+import Loading from "@/components/ui/loading";
+import BlogReader from "@/components/pages/blogs/ui/blog/BlogReader";
+import { getBlogs, getBlog } from "@/lib/server-actions/blog";
 
 interface Params {
   params: { blogId: string };

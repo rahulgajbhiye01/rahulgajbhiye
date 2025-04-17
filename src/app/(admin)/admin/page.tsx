@@ -1,11 +1,5 @@
-import Link from "next/link";
+import AdminDashboard from "@/components/pages/admin";
 
-export default async function DashboardPage() {
-  return (
-    <div className="flex flex-col gap-4 text-center">
-      <Link href={"/admin/blog"}>Blog</Link>
-      <Link href={"/admin/project"}>Project</Link>
-      <Link href={"/admin/skill"}>Skill</Link>
-    </div>
-  );
+export default async function Admin() {
+  return <AdminDashboard />;
 }

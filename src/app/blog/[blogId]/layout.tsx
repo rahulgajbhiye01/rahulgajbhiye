@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { getBlog } from "@/lib/actions/blog";
+import { getBlog } from "@/lib/server-actions/blog";
 
 interface Params {
   params: { blogId: string };

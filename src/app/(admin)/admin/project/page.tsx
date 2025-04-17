@@ -1,9 +1,9 @@
 import { Suspense } from "react";
 import Loading from "@/components/ui/custom/Loading";
 
-import ProjectEditor from "@/components/pages/admin/project";
+import ProjectEditor from "@/components/pages/admin/ui/project";
 import Projects from "@/components/ui/custom/Projects";
-import { getProjects } from "@/lib/actions/project";
+import { getProjects } from "@/lib/server-actions/project";
 
 export const dynamic = "force-dynamic";
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { AuthProvider } from "@/lib/contexts/authContext";
-import BreadcrumbBar from "@/components/ui/custom/BreadcrumbBar";
+import { AuthProvider } from "@/contexts/authContext";
+import BreadcrumbBar from "@/components/pages/admin/ui/breadcrumb-bar";
 import Navbar from "@/components/layouts/navbar";
 export const metadata: Metadata = {
   title: {

@@ -7,6 +7,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Component & Config imports
 import { Toaster } from "@/components/ui/toaster";
+import Navbar from "@/components/layouts/Navbar";
+import Footer from "@/components/layouts/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,8 +25,8 @@ export const metadata: Metadata = {
     template: "%s | Rahul Gajbhiye",
   },
   description:
-    "Rahul Gajbhiye is a Full Stack Developer, developing solutions and contributing to open source communities",
-  keywords: ["Designer", "Developer", "Entrepreneur"],
+    "Rahul Gajbhiye is a full-stack developer & devops engineer, coding and crafting products.",
+  keywords: ["Developer", "Designer", "Entrepreneur"],
   authors: { name: "Rahul Gajbhiye", url: "https://rahulgajbhiye.com" },
   creator: "Rahul Gajbhiye",
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`),
@@ -40,8 +42,12 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en" className="antialiased">
-      <body className={`${inter.className}`}>
-        {children}
+      <body className={`${inter.className} w-full`}>
+        <Navbar />
+        <main className="flex min-h-screen flex-col items-center justify-center bg-background text-foreground">
+          {children}
+        </main>
+        <Footer />
         <Toaster />
         <Analytics />
         <SpeedInsights />

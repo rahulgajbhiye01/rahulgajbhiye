@@ -57,10 +57,10 @@ export default {
         },
       },
       minHeight: {
-        custom: "calc(100vh - 96px)",
+        custom: "calc(100vh - 80px)",
       },
       height: {
-        custom: "calc(100vh - 96px)",
+        custom: "calc(100vh - 80px)",
       },
       borderRadius: {
         lg: "var(--radius)",

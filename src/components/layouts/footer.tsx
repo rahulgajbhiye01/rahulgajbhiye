@@ -1,55 +1,78 @@
-import Title from "@/components/ui/custom/Title";
-import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { GoDownload } from "react-icons/go";
+import Link from "next/link";
+
+import {
+  FiGithub,
+  FiYoutube,
+  FiLinkedin,
+  FiDownload,
+  FiInstagram,
+} from "react-icons/fi";
+import { FaXTwitter, FaThreads } from "react-icons/fa6";
+import { RiPinterestLine } from "react-icons/ri";
+
+const links = [
+  {
+    href: "https://github.com/rahulgajbhiye01",
+    icon: <FiGithub className="size-6" />,
+  },
+  {
+    href: "https://www.linkedin.com/in/rahulgajbhiye01",
+    icon: <FiLinkedin className="size-6" />,
+  },
+  {
+    href: "https://twitter.com/rahulgajbhiye01",
+    icon: <FaXTwitter className="size-6" />,
+  },
+  {
+    href: "https://www.threads.net/@rahulgajbhiye01",
+    icon: <FaThreads className="size-6" />,
+  },
+  {
+    href: "https://www.youtube.com/@rahulgajbhiye01",
+    icon: <FiYoutube className="size-6" />,
+  },
+  {
+    href: "https://in.pinterest.com/rahulgajbhiye01",
+    icon: <RiPinterestLine className="size-6" />,
+  },
+  {
+    href: "https://www.instagram.com/rahulgajbhiye01/",
+    icon: <FiInstagram className="size-6" />,
+  },
+  {
+    href: "https://drive.google.com/drive/folders/1T-q9VJ1BGdrIAGL_RvyIlxnKKfI0JzDb?usp=drive_link",
+    icon: <FiDownload className="size-6" />,
+  },
+];
 
 const Footer = () => {
   const date = new Date().getFullYear();
   return (
-    <footer className="dark flex justify-center bg-background text-foreground shadow-sm drop-shadow">
-      <div className="mt-8 flex h-48 w-11/12 flex-col justify-between py-4 md:w-7/12">
-        <div className="h-0.5 w-full bg-foreground"></div>
-        <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
-          <Title classStyle="text-4xl font-bold md:text-3xl" />
-          <div className="flex w-min flex-row gap-4 text-right">
-            <a
-              href="https://github.com/rahulgajbhiye201"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub className="size-6" />
-            </a>
-            <a
-              href="https://www.youtube.com/@rcodedev"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaYoutube className="size-6" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/rahulgajbhiye201"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin className="size-6" />
-            </a>
-            <a
-              href="https://twitter.com/rahulgajbhiye01"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaSquareXTwitter className="size-6" />
-            </a>
-            <a
-              href="https://drive.google.com/drive/folders/1T-q9VJ1BGdrIAGL_RvyIlxnKKfI0JzDb?usp=drive_link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GoDownload className="size-6" />
-            </a>
+    <footer className="flex justify-center bg-background text-foreground shadow drop-shadow">
+      <div className="flex w-11/12 flex-col items-center justify-between gap-16 py-4 sm:w-2/3">
+        <div className="flex flex-col items-center justify-between gap-8">
+          <div className="flex flex-col items-center gap-2">
+            <span>life | inspire | fitness | tech | code</span>
+            <span>solo leveling!</span>
+          </div>
+
+          <span>Connect with me on:</span>
+
+          <div className="flex w-min flex-row gap-8">
+            {links.map((link, index) => (
+              <Link
+                key={index}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.icon}
+              </Link>
+            ))}
           </div>
         </div>
-        <div className="text-center text-xs font-light">
+
+        <div className="text-sm font-normal">
           <span>©{date} Rahul Gajbhiye</span>
         </div>
       </div>

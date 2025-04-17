@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { getBlogs } from "@/lib/actions/blog";
+import { getBlogs } from "@/lib/server-actions/blog";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogsData = await getBlogs();
@@ -15,7 +15,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.8,
       },
       {
-        url: `https://merch.rahulgajbhiye.com`,
+        url: `https://store.rahulgajbhiye.com`,
         changeFrequency: "weekly",
         priority: 0.8,
       },
@@ -35,7 +35,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.8,
       },
       {
-        url: `https://merch.rahulgajbhiye.com`,
+        url: `https://store.rahulgajbhiye.com`,
         changeFrequency: "weekly",
         priority: 0.8,
       },

@@ -3,8 +3,8 @@ import Link from "next/link";
 import { FaPlus } from "react-icons/fa6";
 
 import Loading from "@/components/ui/custom/Loading";
-import Blog from "@/components/pages/blog";
-import { getBlogs } from "@/lib/actions/blog";
+import Blog from "@/components/pages/blogs";
+import { getBlogs } from "@/lib/server-actions/blog";
 
 export const dynamic = "force-dynamic";
 
